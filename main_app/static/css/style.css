@@ -32,8 +32,13 @@ footer.page-footer {
   color: black;
 }
 
-nav ul a{
-  color: black;
+nav ul a {
+  font-size: larger;
+  font-weight: 700;
+  color: rgb(247, 206, 70);
+  text-shadow: 9px 1px .5px rgb(64, 91, 164);
+  text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
+  rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
 }
 
 nav {
@@ -41,5 +46,9 @@ nav {
 }
 
 nav .brand-logo {
-  color: black;
+  font-weight: 700;
+  color: rgb(247, 206, 70);
+  text-shadow: 9px 1px .5px rgb(64, 91, 164);
+  text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
+  rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
 }
