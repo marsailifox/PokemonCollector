@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Squads</h1>
+
+{% for squad in squads %}
+  <a href="{% url 'squad_detail' squad.id %}">
+
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ squad.name }}</span>
+      </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

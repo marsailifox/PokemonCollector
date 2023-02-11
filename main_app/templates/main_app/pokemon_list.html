@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Pokemon</h1>
+
+{% for pokemon in pokemon_list %}
+  <a href="{% url 'pokemons_detail' pokemon.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ pokemon.name }}</span>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
