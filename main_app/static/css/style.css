@@ -33,7 +33,7 @@ footer.page-footer {
 }
 
 nav ul a {
-  font-size: larger;
+  font-size: 22px;
   font-weight: 700;
   color: rgb(247, 206, 70);
   text-shadow: 9px 1px .5px rgb(64, 91, 164);
