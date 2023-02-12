@@ -34,12 +34,33 @@ def squads_detail(request, squad_id):
     'pokemons': pokemons_squad_doesnt_have
   })
 
+def assoc_pokemon(request, squad_id, pokemon_id):
+  Squad.objects.get(id=squad_id).pokemons.add(pokemon_id)
+  return redirect('squad_detail', squad_id=squad_id)
 
+def disassoc_pokemon(request, squad_id, pokemon_id):
+  Squad.objects.get(id=squad_id).pokemons.remove(pokemon_id)
+  return redirect('squad_detail', squad_id=squad_id)
+
+def add_photo(request, pokemon_id):
+    photo_file = request.FILES.get('photo-file', None)
+    if photo_file:
+        s3 = boto3.client('s3')
+        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+        try:
+            bucket = os.environ['S3_BUCKET']
+            s3.upload_fileobj(photo_file, bucket, key)
+            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+            Photo.objects.create(url=url, pokemon_id=pokemon_id)
+        except Exception as e:
+            print('An error occurred uploading file to S3')
+            print(e)
+    return redirect('detail', pokemon_id=pokemon_id)
+    
 class PokemonCreate(CreateView):
   model = Pokemon
   fields = ['name', 'type', 'description']
   success_url = '/pokemons'
-
 
 class PokemonUpdate(UpdateView):
   model = Pokemon
@@ -63,26 +84,3 @@ class SquadUpdate(UpdateView):
 class SquadDelete(DeleteView):
   model = Squad
   success_url = '/squads'
-
-def assoc_pokemon(request, squad_id, pokemon_id):
-  Squad.objects.get(id=squad_id).pokemons.add(pokemon_id)
-  return redirect('squad_detail', squad_id=squad_id)
-
-def disassoc_pokemon(request, squad_id, pokemon_id):
-  Squad.objects.get(id=squad_id).pokemons.remove(pokemon_id)
-  return redirect('squad_detail', squad_id=squad_id)
-
-def add_photo(request, pokemon_id):
-    photo_file = request.FILES.get('photo-file', None)
-    if photo_file:
-        s3 = boto3.client('s3')
-        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
-        try:
-            bucket = os.environ['S3_BUCKET']
-            s3.upload_fileobj(photo_file, bucket, key)
-            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-            Photo.objects.create(url=url, pokemon_id=pokemon_id)
-        except Exception as e:
-            print('An error occurred uploading file to S3')
-            print(e)
-    return redirect('detail', pokemon_id=pokemon_id)
