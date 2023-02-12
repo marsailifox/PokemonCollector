@@ -52,3 +52,7 @@ nav .brand-logo {
   text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
   rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
 }
+
+body > main > div > div.col.s6 > div > div.card-content {
+  border: 8px solid aqua;
+}
