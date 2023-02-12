@@ -9,10 +9,10 @@ body > main > h1 {
   font-size: 6.5rem;
   margin: 40;
   font-weight: 700;
-  color: rgb(247, 206, 70);
-  text-shadow: 9px 1px .5px rgb(64, 91, 164);
-  text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
-  rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
+  color: rgb(255, 204, 2);
+  text-shadow: 9px 1px .5px rgb(56, 91, 168);
+  text-shadow: rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,  
+  rgb(56, 91, 168) 0px 0px 10px, rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px;
 }
 
 body > main > img {
@@ -35,10 +35,10 @@ footer.page-footer {
 nav ul a {
   font-size: 22px;
   font-weight: 700;
-  color: rgb(247, 206, 70);
-  text-shadow: 9px 1px .5px rgb(64, 91, 164);
-  text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
-  rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
+  color: rgb(255, 204, 2);
+  text-shadow: 9px 1px .5px rgb(56, 91, 168);
+  text-shadow: rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,  
+  rgb(56, 91, 168) 0px 0px 10px, rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px;
 }
 
 nav {
@@ -47,10 +47,10 @@ nav {
 
 nav .brand-logo {
   font-weight: 700;
-  color: rgb(247, 206, 70);
-  text-shadow: 9px 1px .5px rgb(64, 91, 164);
-  text-shadow: rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,  
-  rgb(64, 91, 164) 0px 0px 10px, rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px,   rgb(64, 91, 164) 0px 0px 10px;
+  color: rgb(255, 204, 2);
+  text-shadow: 9px 1px .5px rgb(56, 91, 168);
+  text-shadow: rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,  
+  rgb(56, 91, 168) 0px 0px 10px, rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px,   rgb(56, 91, 168) 0px 0px 10px;
 }
 
 body > main > div > div.col.s6 > div > div.card-content {
